@@ -39,7 +39,7 @@
     </style>
 </head>
 <body id="magenta">
-    <button onclick="magenta()">Mode Psychédélique</button>
+    <button onclick="colors()">Mode Psychédélique</button>
     <div>
         <h1>This is <em>still</em> a motherfucking website.</h1>
         <p>And it's more fucking perfect than the last guy's.</p>
@@ -76,10 +76,24 @@
     </div>
 <script>
 setTimeout(function() {alert('Hey le site xxxvidsxxx est trop bien. Viens dessus stp please')}, 10000);
-function magenta(){
+function colors(){
 document.getElementById('magenta').classList.add('magenta');
-document.querySelectorAll('p').classList.add('blue');
-document.querySelectorAll('h1,h2,h3,h4,h5,h6').classList.add('green');
+// document.getElementsByTagName('p').classList.add('blue');
+document.querySelector('h1').style.color = "green";
+var paragraphe = document.querySelectorAll("p");
+var i;
+for (i = 0; i < paragraphe.length; i++) {
+    paragraphe[i].style.color = "blue";
+    paragraphe[i].style.fontFamily = "papyrus";
+}
+
+var headings = document.querySelectorAll("h1,h2,h3");
+var i;
+for (i = 0; i < y.length; i++) {
+    headings[i].style.color = "green";
+    headings[i].style.fontFamily = "Comic Sans";
+}
+
 }
 </script>
 </body>
